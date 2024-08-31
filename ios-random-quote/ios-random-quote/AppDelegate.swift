@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  ios random quote
+//  ios-random-quote
 //
 //  Created by Lucas Batista on 31/08/24.
 //

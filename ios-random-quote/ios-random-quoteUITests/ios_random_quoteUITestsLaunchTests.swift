@@ -1,6 +1,6 @@
 //
 //  ios_random_quoteUITestsLaunchTests.swift
-//  ios random quoteUITests
+//  ios-random-quoteUITests
 //
 //  Created by Lucas Batista on 31/08/24.
 //
