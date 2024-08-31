@@ -31,10 +31,10 @@ swift_rules_dependencies()
 
 load(
     "@build_bazel_rules_swift//swift:extras.bzl",
-    "swift_rules_extras_dependencies"
+    "swift_rules_extra_dependencies"
 )
 
-swift_rules_extras_dependencies()
+swift_rules_extra_dependencies()
 
 http_archive(
     name = "build_bazel_rules_apple",
