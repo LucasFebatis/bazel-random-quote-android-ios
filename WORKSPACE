@@ -7,7 +7,7 @@ build_name = "RandomQuotes"
 print(build_name)
 
 
-load("functions.blz", "get_project_policy")
+load("functions.bzl", "get_project_policy")
 
 print(get_project_policy(build_name))
 
@@ -52,7 +52,7 @@ apple_rules_dependencies()
 # rules for building Random Quotes for android
 
 android_sdk_repository(
-    name = "androidsdk"
+    name = "androidsdk",
     api_level = 32,
     build_tools = "30.0.0.2"
 )
