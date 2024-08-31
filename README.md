@@ -1,4 +1,4 @@
-# bazel-random-quote-android-ios
+# Random Quote Android and iOS App Bazel Workspace
 Monorepo of a Random Quote for Android and iOS App
 
 ## Purpose
