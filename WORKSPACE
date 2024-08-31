@@ -54,7 +54,7 @@ apple_rules_dependencies()
 android_sdk_repository(
     name = "androidsdk",
     api_level = 32,
-    build_tools = "30.0.0.2"
+    build_tools_version = "30.0.0.2"
 )
 
 http_archive(
@@ -75,12 +75,12 @@ RULES_JVM_EXTERNAL_SHA = "2393f002b0a274055a4e803801cd078df90d1a8ac9f15748d1f803
 
 http_archive(
     name = "rules_jvm_external",
-    strip_prefix = "rule_jvm_external=%s" % RULES_JVM_EXTERNAL_TAG,
+    strip_prefix = "rules_jvm_external-%s" % RULES_JVM_EXTERNAL_TAG,
     sha256 = RULES_JVM_EXTERNAL_SHA,
     url = "https://github.com/bazelbuild/rules_jvm_external/archive/%s.zip" % RULES_JVM_EXTERNAL_TAG
 )
 
-load("@rules_jvm_external//:defs.blz", "maven_install")
+load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
@@ -112,12 +112,12 @@ rules_kotlin_version = "legacy-1.4.0-rc4"
 rules_kotlin_sha = "9cc0e4031bcb7e8508fd9569a81e7042bbf380604a0157f796d06d511cff2769"
 
 http_archive(
-    name = "io_bazel_rules_kotlin",
+    name = "ios_bazel_rules_kotlin",
     urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/%s/rules_kotlin_release.tgz" % rules_kotlin_version],
     sha256 = rules_kotlin_sha
 )
 
-load("@ios_bazel_rules_kotlin//kotlin:koltin.blz", "kotlin_repositories", "kt_register_toolchains")
+load("@ios_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "kt_register_toolchains")
 
 kotlin_repositories()
 
