@@ -12,20 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RandomQuote.Light.NoActionBar.FullScreen">
         <activity
-            android:name=".AboutActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity"
-            android:screenOrientation="landscape"
-            android:theme="@style/Theme.RandomQuote">
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
-        <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
