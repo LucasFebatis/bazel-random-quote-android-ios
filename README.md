@@ -7,6 +7,12 @@ This project aims to demonstrate the viability of using Bazel as a build managem
 
 The development of this project was guided by a YouTube playlist, which can be found [here](https://www.youtube.com/playlist?list=PL23Revp-82LK5Xvy_iQYScLZ6zIyBGZmX).
 
+## Apps
+
+| Android    | iOS |
+| -------- | ------- |
+|  ![screen android](_img/screen-android.png) |   ![screen ios](_img/screen-ios.png)  |
+
 ## Commands
 
 ### iOS
@@ -87,8 +93,10 @@ android_sdk_platform: android-32
 
 8. Add Configurations for build and mobile-install
 
-![Build Configuration](<_img/android-build-configuration.png>)
-![Mobile Install Configuration](<_img/android-mobile-install-configuration.png>)
+| Build    | Mobile-Install |
+| -------- | ------- |
+|  ![Build Configuration](<_img/android-build-configuration.png>) |   ![Mobile Install Configuration](<_img/android-mobile-install-configuration.png>)  |
+
 
 9. Happy Code!
 
