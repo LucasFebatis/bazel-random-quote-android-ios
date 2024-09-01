@@ -112,12 +112,12 @@ rules_kotlin_version = "legacy-1.4.0-rc4"
 rules_kotlin_sha = "9cc0e4031bcb7e8508fd9569a81e7042bbf380604a0157f796d06d511cff2769"
 
 http_archive(
-    name = "ios_bazel_rules_kotlin",
+    name = "io_bazel_rules_kotlin",
     urls = ["https://github.com/bazelbuild/rules_kotlin/releases/download/%s/rules_kotlin_release.tgz" % rules_kotlin_version],
     sha256 = rules_kotlin_sha
 )
 
-load("@ios_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "kt_register_toolchains")
+load("@io_bazel_rules_kotlin//kotlin:kotlin.bzl", "kotlin_repositories", "kt_register_toolchains")
 
 kotlin_repositories()
 
