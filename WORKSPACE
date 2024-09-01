@@ -141,11 +141,18 @@ buildbuddy(name = "buildbuddy_toolchain")
 # Xcodeproj rules
 
 http_archive(
-    name = "com_github_buildbuddy_io_rules_xcodeproj",
-    sha256 = "0b24086579b3824da24031d1f0092df52acd05ad2b6b394989d5cb10021ed2cd",
-    strip_prefix = "rules_xcodeproj-df53dd2f7d9d5be218e9016537927bd26cc37594",
-    urls = ["https://github.com/buildbuddy-io/rules_xcodeproj/archive/df53dd2f7d9d5be218e9016537927bd26cc37594.tar.gz"]
+    name = "rules_xcodeproj",
+    sha256 = "f5c1f4bea9f00732ef9d54d333d9819d574de7020dbd9d081074232b93c10b2c",
+    url = "https://github.com/MobileNativeFoundation/rules_xcodeproj/releases/download/1.13.0/release.tar.gz",
 )
 
-load("@com_github_buildbuddy_io_rules_xcodeproj//xcodeproj:repositories.bzl", "xcodeproj_rules_dependencies")
+load(
+    "@rules_xcodeproj//xcodeproj:repositories.bzl",
+    "xcodeproj_rules_dependencies",
+)
+
 xcodeproj_rules_dependencies()
+
+load("@bazel_features//:deps.bzl", "bazel_features_deps")
+
+bazel_features_deps()
