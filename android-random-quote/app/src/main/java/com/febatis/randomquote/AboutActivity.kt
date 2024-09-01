@@ -30,18 +30,24 @@
 
 package com.febatis.randomquote
 
-import org.junit.Test
+import android.content.pm.ActivityInfo
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
 
-import org.junit.Assert.*
+class AboutActivity : AppCompatActivity() {
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+  override fun onCreate(savedInstanceState: Bundle?) {
+//    requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_about)
+
+    title = getString(R.string.about_page_title)
+    var backButton = findViewById<Button>(R.id.backButton)
+    var name = "Brian"
+    print(name)
+    backButton.setOnClickListener {
+      finish()
     }
+  }
 }
