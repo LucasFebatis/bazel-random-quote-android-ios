@@ -4,44 +4,44 @@ load("@com_github_buildbuddy_io_rules_xcodeproj//xcodeproj:xcodeproj.bzl", "xcod
 
 swift_library(
     name = "tests",
-    srcs = glob(["BullseyeTests/*.swift"]),
+    srcs = glob(["RandomQuoteTests/*.swift"]),
     visibility = ["//visibility:private"],
     deps = [":sources"],
-    module_name = "BullseyeTests"
+    module_name = "RandomQuoteTests"
 )
 
 swift_library(
     name = "sources",
-    srcs = glob(["Bullseye/Sources/*.swift"]),
+    srcs = glob(["RandomQuote/Sources/*.swift"]),
     visibility = ["//visibility:private"],
-    module_name = "Bullseye"
+    module_name = "RandomQuote"
 )
 
 ios_unit_test(
     name = "iostests",
     deps = [":tests"],
     minimum_os_version = "14.0",
-    test_host = ":yourfirstapp",
+    test_host = ":iosapp",
     platform_type = "ios",
     visibility = ["//visibility:public"]
 )
 
 ios_application(
-    name = "yourfirstapp",
+    name = "iosapp",
     deps = [":sources"],
-    bundle_id = "com.example.bullseye",
+    bundle_id = "com.febatis.randomquote",
     families = [
         "iphone",
         "ipad"
     ],
-    infoplists = ["Bullseye/App/Info.plist"],
-    resources = glob(["Bullseye/App/Assets.xcassets/**"]),
+    infoplists = ["RandomQuote/App/Info.plist"],
+    resources = glob(["RandomQuote/App/Assets.xcassets/**"]),
     minimum_os_version = "14.0",
     visibility = ["//visibility:public"]
 )
 
 xcodeproj(
     name = "xcodeproj",
-    project_name = "Bullseye",
-    targets = [":yourfirstapp"]
+    project_name = "RandomQuote",
+    targets = [":iosapp"]
 )
