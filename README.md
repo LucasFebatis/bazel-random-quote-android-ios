@@ -61,24 +61,25 @@ https://developer.android.com/studio/archive
 directories:
   # Add the directories you want added as source here
   # By default, we've added your entire workspace ('.')
-  .
+  android-random-quote
 
 # Automatically includes all relevant targets under the 'directories' above
 derive_targets_from_directories: true
 
 targets:
   # If source code isn't resolving, add additional targets that compile it here
+  //android-random-quote/app/src:androidapp
 
 additional_languages:
   # Uncomment any additional languages you want supported
   # c
   # dart
-  # kotlin
+  kotlin
   # python
 
 
 # Please uncomment an android-SDK platform. Available SDKs are:
-# android_sdk_platform: android-32
+android_sdk_platform: android-32
 # android_sdk_platform: android-34
 ```
 
