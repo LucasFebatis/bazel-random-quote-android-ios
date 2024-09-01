@@ -44,12 +44,6 @@ ios_application(
     visibility = ["//visibility:public"]
 )
 
-# xcodeproj(
-#     name = "xcodeproj",
-#     project_name = "RandomQuote",
-#     targets = [":iosapp"]
-# )
-
 xcodeproj(
     name = "xcodeproj",
     build_mode = "bazel",

@@ -52,8 +52,8 @@ apple_rules_dependencies()
 
 android_sdk_repository(
     name = "androidsdk",
-    api_level = 32,
-    build_tools_version = "30.0.0.2"
+    api_level = 34,
+    build_tools_version = "34.0.0"
 )
 
 http_archive(
